@@ -70,7 +70,7 @@ function Airplane(name) {
   
   /*
     TASK 3
-      - Write a Baby constructor subclassing Person.
+      - Write a Baby constructor sub-classing Person.
       - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
       - Besides the methods on Person.prototype, babies have the ability to `.play()`:
           + Should return a string "Playing with x", x being the favorite toy.
