@@ -97,10 +97,10 @@ console.log(jordan.toString());
   }
 
 Car.prototype.fill = function(gallons){
-  this.tank + gallons
+  this.tank += gallons
   }
   
-  const wrangler = new Car('Wrangler', 16, 0, 102000);
+  const wrangler = new Car('Wrangler', 16);
   wrangler.fill(10);
   console.log(wrangler);
   
