@@ -89,10 +89,20 @@ console.log(jordan.toString());
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- function Car() {
-    
+ function Car(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0
+  }
+
+Car.prototype.fill = function(gallons){
+  this.tank + gallons
   }
   
+  const wrangler = new Car('Wrangler', 16, 0, 102000);
+  wrangler.fill(10);
+  console.log(wrangler);
   
   /*
     TASK 3
@@ -101,25 +111,28 @@ console.log(jordan.toString());
       - Besides the methods on Person.prototype, babies have the ability to `.play()`:
           + Should return a string "Playing with x", x being the favorite toy.
   */
- function Baby(attributes) {
-   jordan.call(this, attributes);
+ function Baby(attributes, favToy) {
+   Person.call(this, attributes);
    this.favToy = attributes.favToy;
   }
 
-  Baby.prototype = object.create(jordan.prototype);
+  Baby.prototype = Object.create(Person.prototype);
 
   Baby.prototype.play = function(){
     return `Playing with ${this.favToy}`;
   }
+
+  const elizabeth = new Baby ('Elizabeth', 6, 'Nintendo Switch');
  
+  elizabeth.play();
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
+    2. Whenever a function is called by a preceding dot, the object before that dot is this.
+    3. Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+    4. Whenever JavaScript’s call or apply method is used, this is explicitly defined.
   */
   
   
